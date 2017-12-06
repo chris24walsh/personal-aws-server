@@ -14,7 +14,7 @@ You will need the following installed locally:
 - Packer
 
 ### Setup
-If you have configured your aws credentials using aws-cli, simply run:
-`packer build template.json`
-Alternatively, you can use a variable file (see `template_variables.json`):
+If you have configured your aws credentials using aws-cli, simply run:  
+`packer build template.json`  
+Alternatively, you can use a variable file (see 'blank_variables.json'):  
 `packer build -var-file=variables.json template.json`
