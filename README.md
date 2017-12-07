@@ -12,9 +12,13 @@ Server will have the following features:
 ### Prerequisites
 You will need the following installed locally:
 - Packer
+- r10k (install using `gem install r10k`
 
 ### Setup
-If you have configured your aws credentials using aws-cli, simply run:  
-`packer build template.json`  
+1. Install the puppet modules from the Puppetfile using r10k:  
+	`r10k puppetfile install`
+2. If you have configured your aws credentials using aws-cli, simply run:  
+	`packer build template.json`  
 Alternatively, you can use a variable file (see 'blank_variables.json'):  
-`packer build -var-file=variables.json template.json`
+	`packer build -var-file=variables.json template.json`
+
