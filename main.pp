@@ -1,10 +1,3 @@
-include git
-
-git::repo{'spacehorse':
-	path => '/var/www/spacehorse',
-	source => 'git://github.com/chris24walsh/spacehorse2.0',
-}
-
 class { 'apache': 
 	default_vhost => false,
 }
@@ -14,3 +7,12 @@ apache::vhost { 'spacehorse.chriswalsh.tk':
   docroot => '/var/www/spacehorse',
 }
 
+package {'git':
+ ensure => latest,
+}
+
+vcsrepo { '/var/www/spacehorse':
+	ensure => present,
+	provider => git,
+	source => 'git://github.com/chris24walsh/spacehorse2.0.git',
+}
