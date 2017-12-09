@@ -23,7 +23,7 @@
 	{
 		"type": "puppet-masterless",
 		"puppet_bin_dir": "/opt/puppetlabs/bin",
-		"manifest_file": "main.pp",
-		"module_paths": ["./modules/"]
+		"manifest_file": "../puppet/main.pp",
+		"module_paths": ["../puppet/modules/"]
 	}]
 }
