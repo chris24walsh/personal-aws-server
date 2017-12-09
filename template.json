@@ -16,12 +16,14 @@
 	"provisioners": [{
 		"type": "shell",
 		"inline": [
-			"sudo rpm -ivh http://yum.puppetlabs.com/puppetlabs-release-el-7.noarch.rpm",
-			"sudo yum install -y puppet"
+			"sudo rpm -Uvh https://yum.puppet.com/puppet5/puppet5-release-el-7.noarch.rpm",
+			"sudo yum install -y puppet-agent"
 		]
 	},
 	{
 		"type": "puppet-masterless",
-		"manifest_file": "main.pp"
+		"puppet_bin_dir": "/opt/puppetlabs/bin",
+		"manifest_file": "main.pp",
+		"module_paths": ["./modules/"]
 	}]
 }
