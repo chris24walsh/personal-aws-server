@@ -11,14 +11,11 @@ Server will have the following features:
 
 ### Prerequisites
 You will need the following installed locally:
+- r10k
 - Packer
-- r10k (install using `gem install r10k`
+- Terraform
 
 ### Setup
-1. Install the puppet modules from the Puppetfile using r10k:  
-	`r10k puppetfile install`
-2. If you have configured your aws credentials using aws-cli, simply run:  
-	`packer build template.json`  
-Alternatively, you can use a variable file (see 'blank_variables.json'):  
-	`packer build -var-file=variables.json template.json`
-
+1. Copy *packer/variables.json.example* to *packer/variables.json*. Populate with your AWS credentials.
+2. Copy *terraform/variables.tf.example* to *terraform/variables.tf*. Populate values as appropriate.
+3. Run the *build.sh* script.
