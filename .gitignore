@@ -1,4 +1,4 @@
-variables.json
+packer/variables.json
 puppet/modules/*
 terraform/.terraform
 terraform/terraform.*
